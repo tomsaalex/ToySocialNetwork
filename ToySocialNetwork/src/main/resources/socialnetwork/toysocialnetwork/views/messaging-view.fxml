@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="CENTER" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.toysocialnetwork.controller.MessagingWindowController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="210.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="210.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="210.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4">
+         <children>
+            <TextField fx:id="sendMessageTextField" onAction="#sendMessage" prefHeight="26.0" prefWidth="341.0" />
+            <Button fx:id="sendMessageButton" onAction="#sendMessage" mnemonicParsing="false" prefHeight="26.0" prefWidth="78.0" text="Send" />
+         </children>
+      </HBox>
+      <TableView fx:id="friendsTableView" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" GridPane.rowSpan="4">
+        <columns>
+          <TableColumn fx:id="friendsTableFirstNameColumn" prefWidth="102.39996337890625" text="First Name" />
+          <TableColumn fx:id="friendsTableLastNameColumn" prefWidth="108.00006103515625" text="Last Name" />
+        </columns>
+      </TableView>
+      <ScrollPane fx:id="chatScrollPane" prefHeight="286.0" prefWidth="421.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="3">
+         <content>
+            <VBox fx:id="chatLogVBox" prefHeight="300.0" prefWidth="400.0">
+               <!--<children>
+                  <VBox alignment="CENTER_LEFT" VBox.vgrow="NEVER">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <HBox alignment="CENTER" maxWidth="-Infinity" minHeight="30.0" minWidth="-Infinity" prefWidth="190.0" style="-fx-background-color: #ff0000;" VBox.vgrow="NEVER">
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #ffffff;" textAlignment="CENTER" wrappingWidth="190.13669967651367">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="30.0">
+                     <children>
+                        <HBox alignment="CENTER" maxWidth="-Infinity" minHeight="30.0" minWidth="-Infinity" prefWidth="190.0" style="-fx-background-color: #00ff00;" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="190.13669967651367">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>-->
+            </VBox>
+         </content>
+      </ScrollPane>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2">
+         <children>
+            <Label fx:id="chattingFriendNameLabel" text="Label">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <AnchorPane>
+         <children>
+            <Button layoutX="79.0" layoutY="3.0" onAction="#loadPreviousWindow" mnemonicParsing="false" text="Back" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="3.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
